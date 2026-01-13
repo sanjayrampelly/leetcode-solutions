@@ -1,0 +1,29 @@
+3783. Mirror Distance of an Integer
+
+sol
+
+class Solution:
+    def mirrorDistance(self, n: int) -> int:
+        rev=0
+        temp=n
+        while(n>0):
+            rem=n%10
+            rev=rem+rev*10
+            n=n//10
+        # print(rev)
+        s=abs(temp-rev)
+
+**********************************************************
+
+1572. Matrix Diagonal Sum
+
+class Solution:
+    def diagonalSum(self, mat: List[List[int]]) -> int:
+        s=0
+        n=len(mat)
+        for i in range(len(mat)):
+            s+=mat[i][i]
+            s+=mat[i][n-i-1]
+        if n%2==1:
+            s-=mat[n//2][n//2]
+        return s
