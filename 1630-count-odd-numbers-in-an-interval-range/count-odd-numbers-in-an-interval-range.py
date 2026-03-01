@@ -1,7 +1,9 @@
 class Solution:
     def countOdds(self, low: int, high: int) -> int:
+        c=0
         if low%2==0 and high%2==0:
-            return (high-low)//2
+            c= (high-low)//2
 
         else:
-            return (high-low)//2 +1
+            c= (high-low)//2 +1
+        return c
