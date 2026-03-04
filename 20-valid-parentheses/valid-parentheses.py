@@ -1,23 +1,24 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        d={"}":"{","]":"[",")":"("}
-        stack=Stack_()
+        d = {"}": "{", "]": "[", ")": "("}
+        stack = Stack_()
         for e in s:
             if e in d.values():
                 stack.push(e)
                 # print("****")
                 # print(stack)
             else:
-                if stack.isempty() or stack.peek()!=d[e]:
+                if stack.isempty() or stack.peek() != d[e]:
                     return False
                 stack.pop()
         return stack.isempty()
 
+
 class Stack_:
     def __init__(self):
-        self.arr=[]
+        self.arr = []
 
-    def push(self,x):
+    def push(self, x):
         return self.arr.append(x)
 
     def pop(self):
@@ -27,7 +28,7 @@ class Stack_:
         return len(self.arr)
 
     def isempty(self):
-        return len(self.arr)==0
+        return len(self.arr) == 0
 
     def peek(self):
         return self.arr[-1] if self.arr else None
