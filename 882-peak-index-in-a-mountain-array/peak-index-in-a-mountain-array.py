@@ -4,10 +4,7 @@ class Solution:
         h = len(a) - 1
 
         while l < h:
-            print("h", h)
-            print("l", l)
             mid = l + (h - l) // 2
-            print("mid", mid)
             if a[mid] > a[mid + 1]:
                 h = mid
             else:
