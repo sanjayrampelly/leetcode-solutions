@@ -12,6 +12,6 @@ class Solution:
         r = 0
         for i in range(len(a)):
             if a[i] != 0:
-                if i != r:          # avoid unnecessary swap
+                if i != r:
                     a[r], a[i] = a[i], a[r]
                 r += 1
