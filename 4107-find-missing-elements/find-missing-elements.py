@@ -8,11 +8,11 @@ class Solution:
         #         res.extend(range(a[i - 1] + 1, a[i]))
 
         # return res
-        min1=min(a)
-        max1=max(a)
-        s=set(a)
-        res=[]
-        for i in range(min1,max1):
+        min1 = min(a)
+        max1 = max(a)
+        s = set(a)
+        res = []
+        for i in range(min1, max1):
             if i not in s:
                 res.append(i)
         return res
