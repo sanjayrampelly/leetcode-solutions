@@ -12,7 +12,7 @@ class Solution:
         def dfs(node, parent, depth):
             if not node:
                 return
-            
+
             if node.val == x:
                 self.xp = parent
                 self.xd = depth
